@@ -1,99 +1,164 @@
 # Karthik Nair — Portfolio
 
-A one-page, production-quality portfolio built with Next.js 15 (App Router),
-TypeScript, Tailwind CSS, and Framer Motion. Content is sourced entirely from
-Karthik's resume — see `lib/data.ts` for the single source of truth.
+Personal portfolio website showcasing my work in backend engineering, cloud computing, AI-powered applications, and software architecture.
 
-## Tech stack
+Built with Next.js 15, TypeScript, Tailwind CSS, and Framer Motion.
 
-- **Framework:** Next.js 15 (App Router) + TypeScript
-- **Styling:** Tailwind CSS, hand-rolled shadcn/ui-style primitives (`components/ui`)
-- **Animation:** Framer Motion (fade/slide reveals only, respects `prefers-reduced-motion`)
-- **Icons:** Lucide React
-- **Fonts:** Geist Sans / Geist Mono (via the `geist` package)
-- **Deployment:** Vercel
+## Live Website
 
-## Getting started
+Coming Soon
+
+---
+
+## Tech Stack
+
+### Frontend
+- Next.js 15 (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+
+### UI & Experience
+- Framer Motion
+- Lucide React
+- Geist Sans / Geist Mono
+
+### Deployment
+- Vercel
+
+---
+
+## Features
+
+- Modern single-page portfolio design
+- Responsive across desktop, tablet, and mobile devices
+- Project showcase with real product screenshots
+- Experience timeline
+- Technical expertise section
+- Achievements and recognitions
+- GitHub activity integration
+- Resume download support
+- SEO optimized
+- Accessibility-focused design
+- Minimal and performance-oriented animations
+
+---
+
+## Featured Projects
+
+### SmartSpend
+AI-powered personal finance platform combining OCR, budgeting, expense tracking, financial insights, and multi-currency planning.
+
+### ProjectForge
+AI-powered proof-of-work and accountability platform featuring tamper-evident verification, audit trails, and AI-assisted evidence review.
+
+### SentinelRoute
+Cloud-native logistics intelligence platform built around multi-tenant architecture, compliance management, fleet operations, and localization support.
+
+---
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Karthik00769/karthik-nair-portfolio.git
+```
+
+Install dependencies:
 
 ```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open:
 
-## Before you deploy
-
-1. **Add your resume PDF.** Drop the actual file at `public/resume.pdf` —
-   every "Download Resume" button links to `/resume.pdf`. Delete
-   `public/README-ADD-RESUME.txt` once done.
-2. **Update the canonical URL.** `app/layout.tsx`, `app/robots.ts`, and
-   `app/sitemap.ts` currently point at `https://karthiknair.dev` as a
-   placeholder — replace with your real production domain.
-3. **Wire up project links.** In `lib/data.ts`, each entry in `projects` has
-   optional `github` and `demo` fields. Fill these in with real repo/demo
-   URLs once available; until then, project "Code" buttons fall back to the
-   main GitHub profile and "Live Demo" buttons are hidden.
-
-Real product screenshots for ProjectForge, SmartSpend, and SentinelRoute are
-already included at `public/projects/` and rendered inside the
-`BrowserFrame` component (`components/browser-frame.tsx`) — no placeholders
-to swap out. If you update a product's UI, just replace the corresponding
-PNG and adjust `width`/`height` in `lib/data.ts` to match the new image's
-actual pixel dimensions.
-
-## Project structure
-
+```text
+http://localhost:3000
 ```
+
+---
+
+## Project Structure
+
+```text
 app/
-  layout.tsx        Root layout: fonts, global SEO metadata
-  page.tsx           Assembles all sections for the single page
-  globals.css        Tailwind layers + base styles
-  robots.ts           robots.txt via Next metadata API
-  sitemap.ts         sitemap.xml via Next metadata API
-
 components/
-  navbar.tsx          Sticky nav with mobile menu
-  footer.tsx
-  section-heading.tsx Shared eyebrow/heading pattern
-  reveal.tsx          Minimal Framer Motion scroll-reveal wrapper
-  browser-frame.tsx    Browser-chrome mockup wrapping real product screenshots
-  ui/                 button, badge, card primitives
-  sections/           hero, about, philosophy, experience, projects,
-                      achievements, skills, github, contact
-
 lib/
-  data.ts             All resume-sourced content (single source of truth)
-  utils.ts            `cn()` class-merging helper
-
-types/                (reserved for shared types as the project grows)
 public/
-  projects/           Real product screenshots (ProjectForge, SmartSpend,
-                      SentinelRoute) shown in the Featured Projects section
-  resume.pdf          Add your resume here (see below)
 ```
 
-## Editing content
+All portfolio content is managed through:
 
-All copy, experience, projects, achievements, and skills live in
-`lib/data.ts` as typed exports. Update facts there; every section
-component reads from this file, so there is no duplicated content to
-keep in sync.
+```text
+lib/data.ts
+```
 
-## Deploying to Vercel
+This acts as the single source of truth for:
 
-1. Push this repository to GitHub.
-2. Go to [vercel.com/new](https://vercel.com/new) and import the repo.
-3. Framework preset is auto-detected as Next.js (see `vercel.json`).
-4. Deploy — no environment variables are required.
+- Experience
+- Projects
+- Achievements
+- Technical Skills
+- Contact Information
 
-## Performance & accessibility notes
+---
 
-- All animations are fade/slide only, gated behind
-  `prefers-reduced-motion`.
-- Visible focus rings on all interactive elements.
-- GitHub stats/contribution images are loaded via `next/image` with
-  `unoptimized` (they're already server-rendered SVG/PNG from GitHub's
-  own services) and lazy-load by default.
-- Semantic headings (`h1`–`h3`) and landmark elements (`header`, `main`,
-  `footer`, `section`) throughout for screen readers and SEO.
+## Deployment
+
+This project is configured for deployment on Vercel.
+
+```bash
+npm run build
+```
+
+After pushing to GitHub:
+
+1. Import the repository into Vercel
+2. Vercel automatically detects Next.js
+3. Deploy
+
+No additional configuration is required.
+
+---
+
+## Performance & Accessibility
+
+- Supports prefers-reduced-motion
+- Semantic HTML structure
+- Responsive layouts
+- Optimized image loading
+- Keyboard accessible navigation
+- SEO-friendly metadata
+- Lighthouse-friendly architecture
+
+---
+
+## About
+
+I'm a software engineering undergraduate focused on backend engineering, cloud computing, distributed systems, and AI-powered applications.
+
+My work centers around building production-style SaaS platforms involving:
+
+- API Design
+- Authentication & RBAC
+- Database Architecture
+- Cloud Infrastructure
+- AI Integration
+- Multi-Tenant Systems
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+The source code is open-source under the MIT License.
+
+All portfolio content, project descriptions, achievements, screenshots, branding, and personal information remain the intellectual property of Karthik Nair and may not be reproduced without permission.
