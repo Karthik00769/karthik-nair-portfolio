@@ -36,9 +36,6 @@ export const metadata: Metadata = {
     title: `${personal.name} — Software Engineer`,
     description: personal.summary,
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
