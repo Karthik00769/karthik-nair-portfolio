@@ -6,7 +6,7 @@ Built with Next.js 15, TypeScript, Tailwind CSS, and Framer Motion.
 
 ## Live Website
 
-Coming Soon
+https://karthik-nair-portfolio.vercel.app/
 
 ---
 
