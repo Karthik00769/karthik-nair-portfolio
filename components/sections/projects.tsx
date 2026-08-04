@@ -68,10 +68,14 @@ export function Projects() {
                     ))}
                   </div>
 
-                  {project.recognition ? (
-                    <div className="mt-5 flex items-start gap-2.5 text-sm text-ink-600">
-                      <Award size={16} className="mt-0.5 shrink-0 text-accent-500" />
-                      <span>{project.recognition}</span>
+                  {project.recognition && project.recognition.length > 0 ? (
+                    <div className="mt-5 space-y-2">
+                      {project.recognition.map((item, idx) => (
+                        <div key={idx} className="flex items-start gap-2.5 text-sm text-ink-600">
+                          <Award size={16} className="mt-0.5 shrink-0 text-accent-500" />
+                          <span>{item}</span>
+                        </div>
+                      ))}
                     </div>
                   ) : null}
 

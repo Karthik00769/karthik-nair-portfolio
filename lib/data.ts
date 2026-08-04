@@ -158,7 +158,7 @@ export type Project = {
   decisions: string[];
   highlights: string[];
   stack: string[];
-  recognition?: string;
+  recognition?: string[];
   github?: string;
   demo?: string;
   visual: ProjectVisual;
@@ -185,7 +185,7 @@ export const projects: Project[] = [
       "Full audit trails for accountability",
     ],
     stack: ["Next.js", "Firebase", "MongoDB", "Vercel"],
-    recognition: "USAII® Global AI Hackathon 2026 Finalist",
+    recognition: ["USAII® Global AI Hackathon 2026 Finalist"],
     github: "https://github.com/Karthik00769/ProjectForge",
     visual: {
       src: "/projects/projectforge.png",
@@ -215,7 +215,10 @@ export const projects: Project[] = [
       "Real-time financial dashboards",
     ],
     stack: ["Next.js", "TypeScript", "MySQL (TiDB Cloud)", "Gemini API", "NextAuth"],
-    recognition: "IEEE YESIST12 2026 International Finalist — Maker Fair track, selected from 2,000+ submissions",
+    recognition: [
+      "IEEE YESIST12 2026 International Finalist — Maker Fair track, selected from 2,000+ submissions",
+      "Conference Publication (ICGMRFT 2026) — Co-authored and presented “SmartSpend: A Goal-Based Personal Financial Planning Platform for Awareness-Driven Savings”, published in the proceedings of the International E-Conference on Global Multidisciplinary Research and Future Technologies (ICGMRFT 2026)."
+    ],
     github: "https://github.com/Karthik00769/SmartSpend",
     visual: {
       src: "/projects/smartspend.png",
@@ -270,6 +273,12 @@ export const achievements: Achievement[] = [
     organization: "IEEE",
     distinction: "International Finalist",
     detail: "Maker Fair track — selected from 2,000+ submissions, for SmartSpend.",
+  },
+  {
+    title: "Conference Publication (ICGMRFT 2026)",
+    organization: "ICGMRFT",
+    distinction: "Co-authored and presented",
+    detail: "“SmartSpend: A Goal-Based Personal Financial Planning Platform for Awareness-Driven Savings”, published in the proceedings of the International E-Conference on Global Multidisciplinary Research and Future Technologies (ICGMRFT 2026).",
   },
   {
     title: "USAII® Global AI Hackathon 2026",
