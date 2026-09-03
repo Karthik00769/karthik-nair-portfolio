@@ -35,12 +35,12 @@ export function About() {
 
               <div className="flex gap-3 border-t border-ink-100 pt-4">
                 <LanguagesIcon size={18} className="mt-0.5 shrink-0 text-accent-500" />
-                <div className="flex flex-wrap gap-x-4 gap-y-1">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
                   {languages.map((lang) => (
-                    <p key={lang.name} className="text-sm text-ink-600">
-                      <span className="font-medium text-ink-950">{lang.name}</span>{" "}
-                      <span className="text-ink-400">— {lang.level}</span>
-                    </p>
+                    <span key={lang} className="flex items-center text-sm font-medium text-ink-950">
+                      <span className="mr-3 text-ink-400">•</span>
+                      {lang}
+                    </span>
                   ))}
                 </div>
               </div>

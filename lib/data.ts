@@ -14,7 +14,7 @@ export const personal = {
     linkedin: "https://linkedin.com/in/karthik-nair-a751ba2a5",
     github: "https://github.com/Karthik00769",
     devfolio: "https://devfolio.co/@Karthik1610",
-    resume: "/Resume.pdf",
+    resume: "/resume.pdf",
   },
   profileImage: "/karthik_prof-preview.png",
   summary:
@@ -29,9 +29,12 @@ export const education = {
 } as const;
 
 export const languages = [
-  { name: "English", level: "Full Professional" },
-  { name: "Tamil", level: "Limited Working" },
-  { name: "Malayalam", level: "Native" },
+  "English",
+  "Tamil",
+  "Malayalam",
+  "Hindi",
+  "Sanskrit",
+  "German"
 ] as const;
 
 export const aboutFocusAreas = [
