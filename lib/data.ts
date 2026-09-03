@@ -29,12 +29,12 @@ export const education = {
 } as const;
 
 export const languages = [
-  "English",
-  "Tamil",
-  "Malayalam",
-  "Hindi",
-  "Sanskrit",
-  "German"
+  { name: "English", level: "Full professional proficiency" },
+  { name: "German", level: "Elementary proficiency" },
+  { name: "Hindi", level: "Professional working proficiency" },
+  { name: "Malayalam", level: "Native or bilingual proficiency" },
+  { name: "Sanskrit", level: "Limited working proficiency" },
+  { name: "Tamil", level: "Full professional proficiency" },
 ] as const;
 
 export const aboutFocusAreas = [
