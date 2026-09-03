@@ -236,21 +236,21 @@ export const projects: Project[] = [
     name: "SentinelRoute",
     tagline: "Operational Logistics Intelligence Platform",
     overview:
-      "A multi-tenant operational intelligence platform for logistics enterprises, combining AI-driven decision support, real-time collaboration, and event-driven operations with enterprise-grade tenant isolation.",
+      "A multi-tenant operational intelligence platform for logistics enterprises, combining deterministic risk analysis, AI-assisted decision support, real-time collaboration, and event-driven operations with enterprise-grade tenant isolation.",
     problem:
-      "Fleet operators often rely on disconnected systems, spreadsheets, and manual coordination, making it difficult to monitor shipments, respond to disruptions, and maintain operational visibility in real time. SentinelRoute unifies fleet operations, intelligence, and collaboration into a single secure operational workspace for every company.",
+      "Fleet operators often rely on disconnected systems, spreadsheets, and manual coordination, making it difficult to monitor shipments, assess operational risks, respond to disruptions, and maintain real-time visibility. SentinelRoute unifies shipment management, fleet operations, risk intelligence, and collaborative decision-making into a secure operational workspace for each company.",
     decisions: [
-      "Designed an event-driven, real-time architecture using Socket.IO, centralized event dispatching, and shared state synchronization to power live shipment tracking, operational intelligence, collaborative decision-making, and enterprise command workflows without continuous polling.",
-      "Built a secure multi-tenant SaaS platform with server-authoritative tenant isolation, Firebase authentication, role-based access control, company onboarding, super-admin verification workflows, audit trails, and hardened WebSocket authorization to prevent cross-tenant data access.",
-      "Developed an AI-assisted operational intelligence layer that analyzes shipment risks, predicts disruptions, generates actionable recommendations, maintains live operational feeds, and enables collaborative command-center decisions through real-time synchronization across connected users.",
+      "Built an event-driven real-time architecture using Socket.IO, centralized event dispatching, shared state synchronization, presence tracking, and live event feeds to power operational dashboards, command-center workflows, shipment collaboration, and real-time decision updates without relying on continuous polling.",
+      "Designed a secure multi-tenant SaaS architecture with server-authoritative tenant isolation, Firebase Authentication, role-based access control, company onboarding and verification workflows, super-admin controls, audit trails, and authenticated WebSocket communication to prevent unauthorized cross-tenant access.",
+      "Developed an operational intelligence engine combining deterministic risk scoring, weather and regional disruption signals, shipment characteristics, urgency, and rule-based recommendations to support proactive logistics decisions, with Gemini-powered explanations, confidence scoring, operational impact metrics, and trade-off analysis.",
     ],
     highlights: [
-      "Strict multi-tenant data isolation",
-      "Company onboarding & verification workflows",
-      "Role-based workforce & compliance modules",
-      "Localization for major regional Indian languages",
+      "Server-authoritative tenant isolation",
+      "Interactive Command Action Panel",
+      "AI-driven risk analysis & disruption prediction",
+      "Live operational state synchronization",
     ],
-    stack: ["Next.js", "TypeScript", "MongoDB", "Firebase", "Socket.io"],
+    stack: ["Next.js", "TypeScript", "MongoDB", "Firebase", "Socket.IO", "React", "Tailwind CSS", "Gemini", "Geoapify", "OpenWeather", "OSRM"],
     github: "https://github.com/Kishore007raj/SentinelRoute",
     visual: {
       src: "/projects/sentinelroute.png",
