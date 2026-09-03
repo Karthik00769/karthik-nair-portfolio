@@ -14,7 +14,7 @@ export const personal = {
     linkedin: "https://linkedin.com/in/karthik-nair-a751ba2a5",
     github: "https://github.com/Karthik00769",
     devfolio: "https://devfolio.co/@Karthik1610",
-    resume: "/resume.pdf",
+    resume: "/Resume.pdf",
   },
   profileImage: "/karthik_prof-preview.png",
   summary:
