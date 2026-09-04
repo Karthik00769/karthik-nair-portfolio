@@ -251,7 +251,7 @@ export const projects: Project[] = [
       "Live operational state synchronization",
     ],
     stack: ["Next.js", "TypeScript", "MongoDB", "Firebase", "Socket.IO", "React", "Tailwind CSS", "Gemini", "Geoapify", "OpenWeather", "OSRM"],
-    github: "https://github.com/Kishore007raj/SentinelRoute",
+    github: "https://github.com/Karthik00769/SentinelRoute",
     visual: {
       src: "/projects/sentinelroute.png",
       alt: "SentinelRoute operations dashboard — fleet risk and shipment overview",
