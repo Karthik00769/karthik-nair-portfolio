@@ -23,14 +23,14 @@ export function BrowserFrame({ visual }: { visual: ProjectVisual }) {
         <span className={cn("h-2.5 w-2.5 rounded-full", isDark ? "bg-ink-700" : "bg-ink-200")} />
       </div>
 
-      <div className="relative">
+      <div className="relative flex justify-center bg-ink-50/50">
         <Image
           src={visual.src}
           alt={visual.alt}
           width={visual.width}
           height={visual.height}
           sizes="(min-width: 768px) 50vw, 100vw"
-          className="w-full"
+          className="w-full h-auto max-h-[350px] lg:max-h-[450px] object-contain"
         />
       </div>
     </div>

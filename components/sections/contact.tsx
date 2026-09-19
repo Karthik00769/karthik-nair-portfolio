@@ -23,7 +23,7 @@ export function Contact() {
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
             <span className="font-mono text-xs tracking-wider text-accent-500">
-              08 — Contact
+              09 — Contact
             </span>
             <h2 className="mt-4 text-display-md font-semibold text-ink-950">
               Let&apos;s build something.

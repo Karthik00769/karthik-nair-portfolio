@@ -12,10 +12,10 @@ export function About() {
         <div className="grid gap-12 md:grid-cols-12">
           <Reveal className="md:col-span-6">
             <p className="text-[15px] leading-relaxed text-ink-600 md:text-base">
-              I&apos;m a software engineering undergraduate who enjoys building products that solve practical problems through thoughtful engineering. My work spans full-stack development, backend systems, cloud infrastructure, and AI-powered applications, with a strong focus on designing software that&apos;s reliable, scalable, and maintainable.
+              I am a Computer Science undergraduate with interests in Backend Engineering, Distributed Systems, Cloud Infrastructure, Full-Stack Development, and AI-Assisted Software Engineering.
             </p>
             <p className="mt-4 text-[15px] leading-relaxed text-ink-600 md:text-base">
-              Over the past few years, I&apos;ve built production-style SaaS platforms covering API design, database architecture, authentication, cloud deployment, AI integration, and multi-tenant systems. Rather than treating projects as one-time demonstrations, I continuously refine and improve them as I learn new technologies and better engineering practices.
+              I have published a research paper in financial technology, competed as an international hackathon finalist, and gained extensive experience in end-to-end system development. My work focuses on scalable SaaS platforms, multi-tenant architectures, and solving real-world problems through thoughtful system design.
             </p>
             <p className="mt-4 text-[15px] leading-relaxed text-ink-600 md:text-base">
               I care more about how software behaves in real-world environments than how impressive it looks in a demo. Building secure APIs, maintaining data consistency, designing scalable architectures, and improving developer experience are the kinds of problems I genuinely enjoy solving.

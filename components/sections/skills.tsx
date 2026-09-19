@@ -9,7 +9,7 @@ export function Skills() {
     <section id="skills" className="border-b border-ink-100 py-24 md:py-32">
       <div className="container">
         <SectionHeading
-          eyebrow="06 — Technical Expertise"
+          eyebrow="07 — Technical Expertise"
           title="Tools I reach for."
           description="Grouped by where they fit in the stack, not by how many logos I can fit on a page."
         />

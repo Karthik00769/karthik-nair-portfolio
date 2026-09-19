@@ -7,7 +7,7 @@
 export const personal = {
   name: "Karthik Nair",
   title: "Software Engineer",
-  tagline: "Backend • Cloud • AI-Powered Applications",
+  tagline: "Backend • Cloud • AI-Assisted Systems",
   location: "Chennai, India",
   email: "karthiknair1610@gmail.com",
   links: {
@@ -18,7 +18,7 @@ export const personal = {
   },
   profileImage: "/karthik_prof-preview.png",
   summary:
-    "I build software products from idea to deployment, combining backend engineering, cloud infrastructure, and AI-powered workflows. My work focuses on scalable SaaS platforms, multi-tenant systems, and practical solutions to real-world problems through thoughtful system design and modern cloud technologies.",
+    "I am a Computer Science undergraduate with interests in Backend Engineering, Distributed Systems, Cloud Infrastructure, Full-Stack Development, and AI-Assisted Software Engineering. I have published a research paper in financial technology, competed as an international hackathon finalist, and built end-to-end software solutions across web, mobile, and cloud-native platforms.",
 } as const;
 
 export const education = {
@@ -169,66 +169,95 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "smartspend",
+    name: "SmartSpend",
+    tagline: "AI-Powered Personal Finance Platform",
+    overview:
+      "A full-stack fintech platform combining robust financial analytics, AI-powered insights, and deterministic transaction processing. The system's architecture and research outcomes resulted in a published conference paper.",
+    problem:
+      "Expense tracking often lacks automation or relies on opaque algorithms. SmartSpend solves this by ensuring all financial processing remains deterministic and auditable, while using AI specifically for personalized insights and categorization.",
+    decisions: [
+      "Architected a full-stack platform leveraging Next.js and MySQL on TiDB Cloud for reliable data persistence and real-time financial analytics.",
+      "Engineered an automated ingestion pipeline that integrates OCR for receipt and statement parsing, feeding directly into a deterministic financial core.",
+      "Deployed the solution to modern cloud infrastructure, ensuring high availability, and integrated the Gemini API for intelligent, explainable spending categorization."
+    ],
+    highlights: [
+      "Full-stack architecture with secure authentication",
+      "Financial analytics and deterministic processing",
+      "AI-powered insights via Gemini",
+      "Cloud deployment and real-time dashboards",
+    ],
+    stack: ["Next.js", "TypeScript", "MySQL (TiDB Cloud)", "Gemini API", "NextAuth"],
+    recognition: [
+      "Conference Publication (ICGMRFT 2026)",
+      "IEEE YESIST12 2026 International Finalist",
+    ],
+    github: "https://github.com/Karthik00769/SmartSpend",
+    visual: {
+      src: "/projects/smartspend.png",
+      alt: "SmartSpend dashboard",
+      width: 1537,
+      height: 985,
+      chrome: "light",
+    },
+  },
+  {
     slug: "projectforge",
     name: "ProjectForge",
     tagline: "AI-Powered Proof-of-Work & Accountability Platform",
     overview:
-      "A full-stack platform for AI-assisted task creation, evidence verification, and accountable progress, built around cryptographic proof, AI-assisted verification, and tamper-evident audit trails so work can be transparently verified.",
+      "A production-oriented SaaS platform for AI-assisted task creation, evidence verification, and accountable progress tracking. Built with a scalable backend and real-time collaboration features.",
     problem:
-      "Progress tracking tools are easy to game—status updates and completed tasks often have nothing verifiable behind them. ProjectForge replaces self-reported progress with AI-assisted workflows, cryptographically-backed evidence, and immutable audit records that create a transparent, trustworthy history of completed work.",
+      "Self-reported progress is difficult to verify in remote environments. ProjectForge provides a transparent, cryptographically-backed audit trail for completed work.",
     decisions: [
-      "SHA-256 cryptographic hashing and append-only audit trails ensure every uploaded proof remains tamper-evident, allowing any modification to submitted evidence to be detected while preserving a transparent verification history.",
-      "AI-assisted evidence analysis generates verification summaries and confidence scores to support the review process, while the final verification decision always remains under human control through a human-in-the-loop workflow.",
-      "Firebase Authentication and role-based access control (RBAC) enforce secure multi-user data isolation, allowing users to access only their own data while administrators maintain platform-wide oversight. MongoDB provides persistent storage, and Vercel powers global deployment.",
+      "Architected a scalable full-stack system with Next.js, MongoDB, and Firebase to support multi-user workflows and seamless real-time collaboration.",
+      "Implemented SHA-256 cryptographic hashing to create tamper-evident audit trails, ensuring that all uploaded proof remains immutable.",
+      "Integrated AI-assisted verification workflows while maintaining strict role-based access control (RBAC) and human-in-the-loop final decision making."
     ],
     highlights: [
-      "Tamper-evident proof management via SHA-256 hashing",
-      "AI-assisted verification with confidence scoring",
-      "Role-based access control",
-      "Full audit trails for accountability",
+      "Multi-user workflows and RBAC",
+      "Real-time collaboration and secure data isolation",
+      "Full-stack architecture with scalable backend",
+      "Tamper-evident proof management",
     ],
     stack: ["Next.js", "Firebase", "MongoDB", "Vercel"],
     recognition: ["USAII® Global AI Hackathon 2026 Finalist"],
     github: "https://github.com/Karthik00769/ProjectForge",
     visual: {
       src: "/projects/projectforge.png",
-      alt: "ProjectForge landing page — Trust Through Evidence",
+      alt: "ProjectForge landing page",
       width: 1898,
       height: 916,
       chrome: "light",
     },
   },
   {
-    slug: "smartspend",
-    name: "SmartSpend",
-    tagline: "AI-Powered Personal Finance Platform",
+    slug: "trustbuddy",
+    name: "Trust Buddy",
+    tagline: "AI Financial Security Assistant",
     overview:
-      "A full-stack fintech platform that automates personal finance through deterministic financial processing, intelligent receipt parsing, and real-time analytics.",
+      "A mobile-first security application featuring a deterministic risk engine and a RAG-enhanced scam detection workflow to protect users from financial phishing and malicious content.",
     problem:
-      "Most expense trackers rely on manual entry, making them difficult to maintain as receipts, UPI payments, and bank statements accumulate. SmartSpend is designed to automate financial record keeping while ensuring every transaction remains deterministic, explainable, and auditable.",
+      "Users face increasingly sophisticated digital threats. Trust Buddy provides secure, AI-assisted explanations for suspicious signals while ensuring that LLM explanations cannot override deterministic security decisions.",
     decisions: [
-      "Designed a deterministic Financial Core that centralizes validation, financial calculations, and business rules, ensuring manual entry, OCR, and bank statement imports all follow the same processing pipeline.",
-      "Built a modular OCR and bank statement ingestion pipeline that focuses solely on extraction, while delegating validation, categorization, and financial correctness to the Financial Core for consistent and reliable processing.",
-      "Combined rule-based categorization with the Gemini API, using deterministic merchant rules first and AI only for ambiguous transactions, followed by confidence scoring to keep financial decisions explainable and trustworthy.",
+      "Developed a robust client-server architecture using an Android (Kotlin + Jetpack Compose) frontend and a high-performance FastAPI backend.",
+      "Engineered a deterministic risk engine that processes OCR, QR analysis, and voice input to identify financial phishing, credential harvesting, and malicious links.",
+      "Implemented a RAG-enhanced security analysis pipeline to generate contextual threat indicators, enforcing strict boundaries so AI explanations never compromise core security protocols."
     ],
     highlights: [
-      "OCR pipeline for receipts and bank statements",
-      "AI + rule-based spending categorization",
-      "Secure authentication with NextAuth",
-      "Real-time financial dashboards",
+      "Android (Kotlin + Jetpack Compose) app",
+      "FastAPI backend and Deterministic Risk Engine",
+      "RAG-enhanced scam detection workflow",
+      "OCR, QR analysis, and voice input integration",
     ],
-    stack: ["Next.js", "TypeScript", "MySQL (TiDB Cloud)", "Gemini API", "NextAuth"],
-    recognition: [
-      "IEEE YESIST12 2026 International Finalist — Maker Fair track, selected from 2,000+ submissions",
-      "Conference Publication (ICGMRFT 2026) — Co-authored and presented “SmartSpend: A Goal-Based Personal Financial Planning Platform for Awareness-Driven Savings”, published in the proceedings of the International E-Conference on Global Multidisciplinary Research and Future Technologies (ICGMRFT 2026)."
-    ],
-    github: "https://github.com/Karthik00769/SmartSpend",
+    stack: ["Kotlin", "Jetpack Compose", "FastAPI", "Gemini", "Groq", "ML Kit"],
+    github: "https://github.com/Karthik00769/Trust-layer",
     visual: {
-      src: "/projects/smartspend.png",
-      alt: "SmartSpend dashboard — monthly spending trend and budget usage",
-      width: 1537,
-      height: 985,
-      chrome: "light",
+      src: "/projects/trustbuddy.png",
+      alt: "Trust Buddy mobile interface",
+      width: 1080,
+      height: 2400,
+      chrome: "dark",
     },
   },
   {
@@ -236,28 +265,57 @@ export const projects: Project[] = [
     name: "SentinelRoute",
     tagline: "Operational Logistics Intelligence Platform",
     overview:
-      "A multi-tenant operational intelligence platform for logistics enterprises, combining deterministic risk analysis, AI-assisted decision support, real-time collaboration, and event-driven operations with enterprise-grade tenant isolation.",
+      "A multi-tenant operational logistics platform combining real-time event synchronization, deterministic risk scoring, and explainable recommendations for command-center decision support.",
     problem:
-      "Fleet operators often rely on disconnected systems, spreadsheets, and manual coordination, making it difficult to monitor shipments, assess operational risks, respond to disruptions, and maintain real-time visibility. SentinelRoute unifies shipment management, fleet operations, risk intelligence, and collaborative decision-making into a secure operational workspace for each company.",
+      "Fleet operators lack integrated visibility and proactive risk assessment. SentinelRoute provides a secure operational workspace powered by real-time state synchronization and explainable risk scoring.",
     decisions: [
-      "Built an event-driven real-time architecture using Socket.IO, centralized event dispatching, shared state synchronization, presence tracking, and live event feeds to power operational dashboards, command-center workflows, shipment collaboration, and real-time decision updates without relying on continuous polling.",
-      "Designed a secure multi-tenant SaaS architecture with server-authoritative tenant isolation, Firebase Authentication, role-based access control, company onboarding and verification workflows, super-admin controls, audit trails, and authenticated WebSocket communication to prevent unauthorized cross-tenant access.",
-      "Developed an operational intelligence engine combining deterministic risk scoring, weather and regional disruption signals, shipment characteristics, urgency, and rule-based recommendations to support proactive logistics decisions, with Gemini-powered explanations, confidence scoring, operational impact metrics, and trade-off analysis.",
+      "Engineered a real-time, event-driven architecture using Socket.IO for centralized event dispatching, shared state synchronization, and live updates across dashboards.",
+      "Developed an operational intelligence engine combining deterministic risk scoring with Gemini-powered explainable recommendations and confidence scoring.",
+      "Designed a secure multi-tenant architecture with server-authoritative tenant isolation, role-based access control, and immutable audit trails."
     ],
     highlights: [
-      "Server-authoritative tenant isolation",
-      "Interactive Command Action Panel",
-      "AI-driven risk analysis & disruption prediction",
-      "Live operational state synchronization",
+      "Real-time state synchronization via Socket.IO",
+      "Deterministic risk scoring and analysis",
+      "Explainable AI recommendations",
+      "Server-authoritative tenant isolation & RBAC",
     ],
-    stack: ["Next.js", "TypeScript", "MongoDB", "Firebase", "Socket.IO", "React", "Tailwind CSS", "Gemini", "Geoapify", "OpenWeather", "OSRM"],
+    stack: ["Next.js", "TypeScript", "MongoDB", "Firebase", "Socket.IO", "React", "Tailwind CSS"],
     github: "https://github.com/Karthik00769/SentinelRoute",
     visual: {
       src: "/projects/sentinelroute.png",
-      alt: "SentinelRoute operations dashboard — fleet risk and shipment overview",
+      alt: "SentinelRoute operations dashboard",
       width: 1871,
       height: 818,
       chrome: "dark",
+    },
+  },
+  {
+    slug: "dvote",
+    name: "D-VOTE",
+    tagline: "Decentralized Web3 Voting Platform",
+    overview:
+      "A secure, transparent, and blockchain-powered voting platform designed to ensure immutable voting records and transparent election management based on a decentralized trust model.",
+    problem:
+      "Traditional voting systems suffer from opacity and potential tampering. D-VOTE leverages Web3 architecture to provide verifiable, tamper-proof elections where trust is guaranteed by cryptography.",
+    decisions: [
+      "Developed robust Solidity smart contracts deployed on Ethereum Sepolia to enforce a strict one-vote-per-wallet policy and secure on-chain election management.",
+      "Utilized Hardhat for comprehensive smart contract testing and deployment workflows, ensuring a resilient blockchain backend.",
+      "Integrated MetaMask using ethers.js and viem to create a decentralized frontend experience that enables transparent viewing and verification of election results."
+    ],
+    highlights: [
+      "Solidity smart contracts on Ethereum Sepolia",
+      "Immutable voting records and one vote per wallet",
+      "Transparent on-chain election management",
+      "Web3 architecture with MetaMask integration",
+    ],
+    stack: ["Solidity", "Ethereum Sepolia", "Hardhat", "ethers.js", "viem", "MetaMask"],
+    github: "https://github.com/Karthik00769/d-vote",
+    visual: {
+      src: "/projects/dvote.png",
+      alt: "D-VOTE decentralized platform",
+      width: 1920,
+      height: 1080,
+      chrome: "light",
     },
   },
 ];
@@ -272,23 +330,47 @@ export type Achievement = {
 
 export const achievements: Achievement[] = [
   {
-    title: "IEEE YESIST12 2026",
+    title: "Conference Publication",
+    organization: "ICGMRFT 2026",
+    distinction: "Co-Author",
+    detail: 'Published research paper:\n"SmartSpend: A Goal-Based Personal Financial Planning Platform for Awareness-Driven Savings" (ICGMRFT 2026)',
+    period: "2026",
+  },
+  {
+    title: "IEEE YESIST12",
     organization: "IEEE",
     distinction: "International Finalist",
-    detail: "Maker Fair track — selected from 2,000+ submissions, for SmartSpend.",
+    detail: "Maker Fair Track — selected among 2,000+ global submissions for SmartSpend.",
+    period: "2026",
   },
   {
-    title: "Conference Publication (ICGMRFT 2026)",
-    organization: "ICGMRFT",
-    distinction: "Co-authored and presented",
-    detail: "“SmartSpend: A Goal-Based Personal Financial Planning Platform for Awareness-Driven Savings”, published in the proceedings of the International E-Conference on Global Multidisciplinary Research and Future Technologies (ICGMRFT 2026).",
-  },
-  {
-    title: "USAII® Global AI Hackathon 2026",
+    title: "USAII® Global AI Hackathon",
     organization: "USAII",
     distinction: "International Finalist",
-    detail: "Recognized for ProjectForge.",
+    detail: "Recognized for ProjectForge and AI-assisted software innovation.",
+    period: "2026",
   },
+  {
+    title: "ALOHA Abacus National Competition",
+    organization: "ALOHA",
+    distinction: "First Runner-Up",
+    detail: "National-level ALOHA Abacus Competition.",
+    period: "2019",
+  },
+  {
+    title: "ALOHA Abacus State Competition",
+    organization: "ALOHA",
+    distinction: "State Winner",
+    detail: "State-level ALOHA Abacus Competition.",
+    period: "2019",
+  },
+  {
+    title: "ALOHA Abacus Tiny Tots Competition",
+    organization: "ALOHA",
+    distinction: "State Winner",
+    detail: "State-level ALOHA Abacus Competition (Tiny Tots Category).",
+    period: "2012",
+  }
 ];
 
 export type SkillCategory = {
@@ -298,50 +380,51 @@ export type SkillCategory = {
 
 export const skillCategories: SkillCategory[] = [
   {
-    label: "Languages",
-    items: ["JavaScript", "TypeScript", "HTML/CSS", "Python", "SQL", "C", "C++"],
-  },
-  {
-    label: "Frontend",
-    items: ["React", "Next.js", "Tailwind CSS", "Firebase Authentication"],
-  },
-  {
     label: "Backend",
     items: [
       "Node.js",
       "Express.js",
+      "FastAPI",
       "REST APIs",
       "Authentication & RBAC",
       "File Upload Pipelines",
       "Payment Integration",
       "NextAuth.js",
       "JWT",
-      "Socket.io"
+      "Socket.IO"
     ],
+  },
+  {
+    label: "Cloud & Infrastructure",
+    items: ["Docker", "Google Cloud Platform (GCP)", "AWS S3", "Linux", "SSH", "Nginx", "Vercel", "Containerization"],
   },
   {
     label: "Databases",
     items: ["MongoDB", "MySQL", "PostgreSQL", "Supabase"],
   },
   {
-    label: "Cloud & Infrastructure",
-    items: ["Google Cloud Platform", "AWS S3", "Docker", "Linux", "SSH", "Nginx", "Vercel", "Firebase"],
+    label: "AI & Automation",
+    items: ["Gemini API", "Prompt Engineering", "OCR Pipelines", "OpenCV", "ML Kit", "LLM Integration"],
   },
   {
-    label: "AI & Automation",
-    items: ["Gemini API", "Prompt Engineering", "OCR Pipelines", "OpenCV"],
+    label: "Frontend",
+    items: ["React", "Next.js", "Tailwind CSS", "Firebase Authentication", "Android Development (Kotlin)", "Jetpack Compose"],
+  },
+  {
+    label: "Languages",
+    items: ["JavaScript", "TypeScript", "HTML/CSS", "Python", "SQL", "C", "C++"],
+  },
+  {
+    label: "Developer Tools",
+    items: ["Git", "GitHub", "Postman", "VS Code", "FFmpeg", "Figma", "Android Studio"],
   },
   {
     label: "Web3",
     items: ["Solidity", "Smart Contracts", "Web3.js", "Ethers.js", "Hardhat"],
   },
   {
-    label: "Developer Tools",
-    items: ["Git", "GitHub", "Postman", "VS Code", "FFmpeg", "Figma"],
-  },
-  {
     label: "Core CS",
-    items: ["Data Structures & Algorithms", "Operating Systems", "Computer Networks", "OOP", "System Design"],
+    items: ["Data Structures & Algorithms", "Operating Systems", "Computer Networks", "OOP", "System Design", "Database Management Systems", "Software Engineering"],
   },
 ];
 
@@ -351,6 +434,7 @@ export const nav = [
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Achievements", href: "#achievements" },
+  { label: "Volunteering", href: "#volunteering" },
   { label: "Skills", href: "#skills" },
   { label: "GitHub", href: "#github" },
   { label: "Contact", href: "#contact" },

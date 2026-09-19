@@ -1,7 +1,9 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
-import { Reveal } from "@/components/reveal";
 import { Card } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
 import { personal, projects } from "@/lib/data";
@@ -9,12 +11,39 @@ import { cn } from "@/lib/utils";
 
 const GITHUB_USERNAME = "Karthik00769";
 
+function FallbackImage({ src, fallbackSrc, alt, width, height, className }: any) {
+  const [error, setError] = useState(false);
+
+  if (error && !fallbackSrc) {
+    return (
+      <div 
+        className={cn("flex items-center justify-center rounded-lg border border-ink-100 bg-ink-50 text-sm text-ink-500", className)} 
+        style={{ minHeight: height }}
+      >
+        Unable to load {alt.toLowerCase()}
+      </div>
+    );
+  }
+
+  return (
+    <Image
+      src={error && fallbackSrc ? fallbackSrc : src}
+      alt={alt}
+      width={width}
+      height={height}
+      unoptimized
+      className={className}
+      onError={() => setError(true)}
+    />
+  );
+}
+
 export function GithubSection() {
   return (
     <section id="github" className="border-b border-ink-100 py-24 md:py-32">
       <div className="container">
         <SectionHeading
-          eyebrow="07 — GitHub"
+          eyebrow="08 — Open Source"
           title="Open, in progress, in public."
           description="A live look at recent activity — pulled directly from GitHub."
         />
@@ -23,46 +52,15 @@ export function GithubSection() {
           <Card className="overflow-hidden p-6 md:p-8">
             <h3 className="mb-4 text-sm font-medium text-ink-950">Contribution activity</h3>
             <div className="overflow-x-auto">
-              <Image
-                src={`https://ghchart.rshah.org/2563EB/${GITHUB_USERNAME}`}
-                alt={`${personal.name}'s GitHub contribution graph`}
+              <FallbackImage
+                src={`https://ghchart.rshah.org/${GITHUB_USERNAME}`}
+                alt="GitHub contribution graph"
                 width={1000}
                 height={200}
-                unoptimized
                 className="min-w-[720px] w-full"
               />
             </div>
           </Card>
-
-          <div className="grid gap-6 lg:grid-cols-2">
-            <Reveal>
-              <Card className="p-6 md:p-8">
-                <h3 className="mb-4 text-sm font-medium text-ink-950">Stats</h3>
-                <Image
-                  src={`https://github-readme-stats.vercel.app/api?username=${GITHUB_USERNAME}&show_icons=true&hide_border=true&bg_color=ffffff&title_color=2563EB&icon_color=2563EB&text_color=48484F`}
-                  alt="GitHub stats"
-                  width={495}
-                  height={195}
-                  unoptimized
-                  className="w-full"
-                />
-              </Card>
-            </Reveal>
-
-            <Reveal delay={0.05}>
-              <Card className="p-6 md:p-8">
-                <h3 className="mb-4 text-sm font-medium text-ink-950">Most used languages</h3>
-                <Image
-                  src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${GITHUB_USERNAME}&layout=compact&hide_border=true&bg_color=ffffff&title_color=2563EB&text_color=48484F`}
-                  alt="Most used languages"
-                  width={495}
-                  height={195}
-                  unoptimized
-                  className="w-full"
-                />
-              </Card>
-            </Reveal>
-          </div>
 
           <div>
             <h3 className="mb-4 text-sm font-medium text-ink-950">Pinned repositories</h3>
